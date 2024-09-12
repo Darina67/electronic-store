@@ -109,6 +109,5 @@ export default {
       return re.test(email);
     },
   },
-  5
 };
 </script>

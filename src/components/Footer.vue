@@ -6,7 +6,7 @@
           <div class="logo">
             <router-link to="/">
               <div>
-                <img src="/logo.png" alt="Logo" />
+                <img src="/public/img/logo.png" alt="Logo" />
               </div>
             </router-link>
             <div class="logo-info max-w-[350px] pt-5">
