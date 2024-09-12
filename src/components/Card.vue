@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
   id: Number,
   title: String,
@@ -10,7 +9,6 @@ defineProps({
   onClickFavorite: Function,
   onClickAdd: Function,
 });
-
 </script>
 <template>
   <div
@@ -23,7 +21,11 @@ defineProps({
       class="absolute top-3 left-2"
       @click="onClickFavorite"
     />
-    <img class="w-52 h-52 object-contain" :src="imageUrl" alt="Item" />
+    <img
+      class="w-52 h-52 object-contain"
+      :src="/products/ + imageUrl"
+      alt="Item"
+    />
     <div class="description">
       <div class="title mt-5">
         {{ title }}
@@ -35,7 +37,7 @@ defineProps({
         <b>{{ price }} ₽.</b>
       </div>
       <img
-      v-if="onClickFavorite"
+        v-if="onClickFavorite"
         @click="onClickAdd"
         :src="!isAdded ? '/plus.svg' : '/checked.svg'"
         alt="plus"
